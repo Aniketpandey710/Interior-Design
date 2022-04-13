@@ -1,0 +1,123 @@
+<header id="header" class="fixed-top">
+    <div class="container d-flex">
+  
+      <div class="logo mr-auto">
+        <h1 class="text-light"><a href="index.html">Maxim</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+  
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li><a routerLink="/">Home</a></li>
+          <li><a routerLink="/about">About Us</a></li>
+          <li><a routerLink="/services">Services</a></li>
+          <li><a routerLink="/potfolio">Portfolio</a></li>
+          <li><a routerLink="/team">Team</a></li>
+          <li><a routerLink="/products">Our products</a></li>
+          <li class="active"><a routerLink="/cart" >Cart</a></li>
+          <li><a routerLink="/create-employee">Any Help?</a></li>
+          <li><a routerLink="/login">login/Register</a></li>
+          
+        </ul>
+      </nav><!-- .nav-menu -->
+  
+    </div>
+  </header><!-- End Header -->
+  <section id="cart" class="cart">
+    <div class="container">
+<h3>Cart Info</h3>
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>Option</th>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Photo</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Sub Total</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let item of items">
+        <td align="center">
+            <a (click)="remove(item.product.id)">Remove Item</a>
+        </td>
+        <td>{{item.product.id}}</td>
+        <td>{{item.product.name}}</td>
+        <td>
+            <img src="assets/img/{{item.product.photo}}" width="60">
+        </td>
+        <td>{{item.product.price}}</td>
+        <td>{{item.quantity}}</td>
+        <td>{{item.product.price * item.quantity}}</td>
+    </tr>
+
+    <tr>
+        <td  colspan="6" class="text-right">Total</td>
+        <td >{{total}}</td>
+    </tr>
+
+</tbody>
+</table>
+<div class ="text-center">
+  <button mat-raised-button color="accent"><a href="/login">Proceed to checkout</a></button>
+ </div>
+
+</div>
+</section>
+
+<footer id="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-info">
+            <h3>Maxim</h3>
+            <p>
+              B 116 Chhatarpur <br>
+              New Delhi, India<br><br>
+              <strong>Phone:</strong> +91 8799728923<br>  +91 8802603443<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+            <div class="social">
+              <a href="https://www.twitter.com"><i class="bx bxl-twitter"></i></a>
+              <a href="http://www.facebook.com"><i class="bx bxl-facebook"></i></a>
+              <a href="https://www.instagram.com"><i class="bx bxl-instagram"></i></a>
+              <a href="https://www.linkedin.com"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a routerLink="/home">Home</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a routerLink="/about">About us</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a routerLink="/services">Services</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a routerLink="/services">False Ceiling</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a routerLink="/services">Wooden Flooring</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a routerLink="/services">Wall Work</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a routerLink="/services">Furniture</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6 footer-newsletter">
+          <h4>Get in Touch</h4>
+          <button style="font-size:24px; background-color: #0c1817; border: none;"><a routerLink="/contact" style="color:white">Contact Us </a><i class="fa fa-user-circle" style="margin-left: 5px;"></i></button>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</footer>

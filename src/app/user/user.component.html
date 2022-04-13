@@ -1,0 +1,27 @@
+<header id="header" class="fixed-top">
+  <div class="container d-flex">
+
+    <div class="logo mr-auto">
+      <h1 class="text-light"><a href="index.html">Maxim</a></h1>
+      
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+    </div>
+
+    <nav class="nav-menu d-none d-lg-block">
+      <ul>
+        <li><a routerLink="/">Home</a></li>
+       
+      </ul>
+    </nav><!-- .nav-menu -->
+
+  </div>
+</header><!-- End Header-->
+<div class="wrapper">
+  <div id="formContent">
+    <h2 class="underlineHover"  routerLink="/login"  routerLinkActive="active"> Log In </h2>
+    <br>
+    <h2 class="underlineHover"  routerLink="/signup"  routerLinkActive="active">Register </h2>
+    <router-outlet></router-outlet>
+  </div>
+</div>

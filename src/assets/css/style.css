@@ -393,19 +393,21 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 1024px) {
   #hero {
+    margin-top: 12px;
     background-attachment: fixed;
   }
 }
 
 @media (max-width: 992px) {
   #hero {
-    margin-top: 60px;
+    margin-top: 0px;
     height: calc(100vh - 60px);
   }
 }
 
 @media (max-width: 768px) {
   #hero h1 {
+    
     font-size: 28px;
     line-height: 36px;
   }

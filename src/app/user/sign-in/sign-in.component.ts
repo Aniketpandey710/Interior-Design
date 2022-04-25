@@ -35,5 +35,8 @@ export class SignInComponent implements OnInit {
       }
     );
   }
+  sign(){
+    console.log("Clicked");
+    }
 
 }

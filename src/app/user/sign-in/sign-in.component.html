@@ -12,9 +12,11 @@
     <div *ngIf="signInForm.submitted && password.errors?.minlength">
       <label class="validation-message">Minimum 4 characters.</label>
     </div>
-    <input type="submit" value="Sign In">
+    <input type="submit" value="Sign_In" onclick="sign()">
+    <!-- <button onclick="sign()" value="Sign_in">Sign_in</button> -->
   </form>
   <!-- Error message -->
 <div class="alert" *ngIf="serverErrorMessages">
     {{serverErrorMessages}}
   </div>
+

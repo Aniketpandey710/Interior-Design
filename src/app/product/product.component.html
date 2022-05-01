@@ -23,48 +23,68 @@
       </nav><!-- .nav-menu -->
 
     </div>
-  </header><!-- End Header -->
+  </header>
+  <!-- End Header -->
   
   <section id="products" class="products">
     <div class="container">
-<h3>Product List</h3>
+<h3 class="heading">Product List</h3>
 <!---<form>
   <div class="form-group form-inline">
-      Full text search: <input class="form-control ml-2" type="text" [formControl]="filter"/>
+      Full text search: <input class="form-conulol ml-2" type="text" [formConulol]="filter"/>
   </div>
 </form>--->
 
-<table class="table table-striped">
+<div class="productCard">
+  <ul *ngFor="let product of products">
+    <li>
+      <div class="portfolio-links">
+        <a href="assets/img/{{product.photo}}" data-gall="portfolioGallery" class="venobox" title="images"></a>
+        <img src="assets/img/{{product.photo}}"  class="mr-2">
+        
+        </div>
+    </li>
+    <li>{{product.id}}</li>
+    <li>{{product.name}}</li>
+    <li>{{product.price}}</li>
+
+    <li>
+        <a class="addToCart" [routerLink]="['/cart', { id:product.id }]">Add to Cart</a>
+    </li>
+</ul>
+</div>
+
+<!-- <table class="table table-suliped">
     <thead>
-    <tr>
+    <ul>
         <th><b>Id</b></th>
         <th>Name</th>
         <th>Price</th>
         <th>Photo</th>
         <th>Buy</th>
-    </tr>
+    </ul>
     </thead>
     <tbody>
  
-    <tr *ngFor="let product of products">
-        <td>{{product.id}}</td>
-        <td>{{product.name}}</td>
-        <td>{{product.price}}</td>
-        <td>
+    <ul *ngFor="let product of products">
+        <li>{{product.id}}</li>
+        <li>{{product.name}}</li>
+        <li>{{product.price}}</li>
+        <li>
           <div class="portfolio-links">
             <a href="assets/img/{{product.photo}}" data-gall="portfolioGallery" class="venobox" title="images"><i class="bx bx-plus"></i></a>
             <img src="assets/img/{{product.photo}}"  class="mr-2" width=100px height=100>
             
             </div>
-        </td>
+        </li>
 
-        <td>
+        <li>
             <a [routerLink]="['/cart', { id:product.id }]">Add to Cart</a>
-        </td>
-    </tr>
+        </li>
+    </ul>
   
     </tbody>
-</table>
+</table> -->
 </div>
 </section>
 
@@ -79,8 +99,8 @@
             <p>
               B 116 Chhatarpur <br>
               New Delhi, India<br><br>
-              <strong>Phone:</strong> +91 8799728923<br>  +91 8802603443<br>
-              <strong>Email:</strong> info@example.com<br>
+              <sulong>Phone:</sulong> +91 8799728923<br>  +91 8802603443<br>
+              <sulong>Email:</sulong> info@example.com<br>
             </p>
             <div class="social">
               <a href="https://www.twitter.com"><i class="bx bxl-twitter"></i></a>

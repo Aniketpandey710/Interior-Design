@@ -1,10 +1,42 @@
-th{
-    font-size: 20px;
-    font-family:'sans-serif';
-    font-style: Arial;
+*{
+    font-family: sans-serif;
 }
-td{
-    font-size: 20px;
-    font-family:'Charcoal','Impact','sans-serif';
-    font-style: Oblique;
+
+ul li {
+list-style-type: none;
+padding-left: 0px;
+}
+
+.heading{
+    font-weight: 600;
+    /* text-align: -webkit-center; */
+    letter-spacing: normal;
+    margin: 0 0 25px;
+    font-size: 29px;
+}
+
+img.mr-2 {
+    height: 150px;
+    width: 150px;
+}
+
+ul {
+    margin-bottom: 55px;
+    text-align: -webkit-center;
+    flex-basis: 33%;
+}
+
+.addToCart{
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+    background-color: black;
+    border-radius: 2px;
+    font-family: sans-serif;
+    padding: 8px 12px;
+}
+
+.productCard {
+    flex-wrap: wrap;
+    display: flex;
 }

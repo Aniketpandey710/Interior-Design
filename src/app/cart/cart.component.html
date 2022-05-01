@@ -26,10 +26,34 @@
   </header><!-- End Header -->
   <section id="cart" class="cart">
     <div class="container">
-<h3>Cart Info</h3>
-<table class="table table-bordered">
+<h3 class="heading">Cart Info</h3>
+
+<div class="cartTable">
+  <ul *ngFor="let item of items">
+    <li>
+      <img src="assets/img/{{item.product.photo}}">
+  </li>
+    <li>
+      <span class="head">Option : </span> <a (click)="remove(item.product.id)">Remove Item</a>
+    </li>
+    <li><span class="head">Id : </span>{{item.product.id}}</li>
+    <li><span class="head">Name : </span>{{item.product.name}}</li>
+    <li><span class="head">Price : </span>{{item.product.price}}</li>
+    <li><span class="head">Quantity : </span>{{item.quantity}}</li>
+    <li><span class="head">Sub Total : </span>{{item.product.price * item.quantity}}</li>
+</ul>
+</div>
+
+<ul class="total">
+  <li class="totalText" colspan="6">Total : </li>
+  <li> Rs. {{total}}</li>
+
+
+</ul>
+
+<!-- <table class="table table-bordered">
     <thead>
-    <tr>
+    <ul>
         <th>Option</th>
         <th>Id</th>
         <th>Name</th>
@@ -37,30 +61,30 @@
         <th>Price</th>
         <th>Quantity</th>
         <th>Sub Total</th>
-    </tr>
+    </ul>
 </thead>
 <tbody>
-    <tr *ngFor="let item of items">
-        <td align="center">
+    <ul *ngFor="let item of items">
+        <li align="center">
             <a (click)="remove(item.product.id)">Remove Item</a>
-        </td>
-        <td>{{item.product.id}}</td>
-        <td>{{item.product.name}}</td>
-        <td>
+        </li>
+        <li>{{item.product.id}}</li>
+        <li>{{item.product.name}}</li>
+        <li>
             <img src="assets/img/{{item.product.photo}}" width="60">
-        </td>
-        <td>{{item.product.price}}</td>
-        <td>{{item.quantity}}</td>
-        <td>{{item.product.price * item.quantity}}</td>
-    </tr>
+        </li>
+        <li>{{item.product.price}}</li>
+        <li>{{item.quantity}}</li>
+        <li>{{item.product.price * item.quantity}}</li>
+    </ul>
 
-    <tr>
-        <td  colspan="6" class="text-right">Total</td>
-        <td >{{total}}</td>
-    </tr>
+    <ul>
+        <li  colspan="6" class="text-right">Total</li>
+        <li >{{total}}</li>
+    </ul>
 
 </tbody>
-</table>
+</table> -->
 <div class ="text-center">
   <button mat-raised-button color="accent"><a href="/login">Proceed to checkout</a></button>
  </div>
@@ -79,8 +103,8 @@
             <p>
               B 116 Chhatarpur <br>
               New Delhi, India<br><br>
-              <strong>Phone:</strong> +91 8799728923<br>  +91 8802603443<br>
-              <strong>Email:</strong> info@example.com<br>
+              <sulong>Phone:</sulong> +91 8799728923<br>  +91 8802603443<br>
+              <sulong>Email:</sulong> info@example.com<br>
             </p>
             <div class="social">
               <a href="https://www.twitter.com"><i class="bx bxl-twitter"></i></a>
